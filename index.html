@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameZone - Professional Gaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ---------- NAVBAR ---------- -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo">🎮 GameZone</span>
+    </div>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" title="Theme">🌙</button>
+      <button class="icon-btn" id="favBtn" title="Favorites">⭐</button>
+    </div>
+  </nav>
+
+  <!-- ---------- HEADER ---------- -->
+  <header class="header">
+    <h1 class="title">🎮 GameZone</h1>
+    <p class="subtitle">Best games, reviews aur downloads</p>
+  </header>
+
+  <!-- ---------- SEARCH + FILTER ---------- -->
+  <section class="controls">
+    <input type="text" id="searchInput" class="search" placeholder="🔍 Game dhundo...">
+
+    <div class="categories">
+      <button class="cat-btn active" data-cat="all">All</button>
+      <button class="cat-btn" data-cat="action">Action</button>
+      <button class="cat-btn" data-cat="racing">Racing</button>
+      <button class="cat-btn" data-cat="puzzle">Puzzle</button>
+      <button class="cat-btn" data-cat="sports">Sports</button>
+      <button class="cat-btn" data-cat="adventure">Adventure</button>
+    </div>
+  </section>
+
+  <!-- ---------- STATS ---------- -->
+  <section class="stats">
+    <div class="stat-box">
+      <span class="stat-num" id="totalGames">20</span>
+      <span class="stat-label">Total Games</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num" id="favCount">0</span>
+      <span class="stat-label">Favorites</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num" id="shownCount">20</span>
+      <span class="stat-label">Showing</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num" id="totalDownloads">0</span>
+      <span class="stat-label">Downloads</span>
+    </div>
+  </section>
+
+  <!-- ---------- GAMES GRID ---------- -->
+  <main class="container" id="gamesGrid">
+
+    <!-- ========== GAME 1 ========== -->
+    <div class="game-card" data-cat="action" data-name="Game 1" data-id="game1">
+      <div class="thumb">
+        <img src="images/1.jpg" alt="Game 1">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">01</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 1</span>
+        <span class="cat-tag">Action</span>
+
+        <div class="rating-display">
+          <span class="stars" id="stars-game1">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game1">0.0</span>
+          <span class="rating-count" id="count-game1">(0)</span>
+        </div>
+
+        <span class="download-count" id="dl-game1">⬇️ 0 downloads</span>
+
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 1">▶ Play</a>
+          <button class="download-btn" data-game="Game 1" data-file="game1.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 1">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 2 ========== -->
+    <div class="game-card" data-cat="racing" data-name="Game 2" data-id="game2">
+      <div class="thumb">
+        <img src="images/2.jpg" alt="Game 2">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">02</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 2</span>
+        <span class="cat-tag">Racing</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game2">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game2">0.0</span>
+          <span class="rating-count" id="count-game2">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game2">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 2">▶ Play</a>
+          <button class="download-btn" data-game="Game 2" data-file="game2.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 2">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 3 ========== -->
+    <div class="game-card" data-cat="puzzle" data-name="Game 3" data-id="game3">
+      <div class="thumb">
+        <img src="images/3.jpg" alt="Game 3">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">03</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 3</span>
+        <span class="cat-tag">Puzzle</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game3">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game3">0.0</span>
+          <span class="rating-count" id="count-game3">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game3">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 3">▶ Play</a>
+          <button class="download-btn" data-game="Game 3" data-file="game3.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 3">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 4 ========== -->
+    <div class="game-card" data-cat="sports" data-name="Game 4" data-id="game4">
+      <div class="thumb">
+        <img src="images/4.jpg" alt="Game 4">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">04</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 4</span>
+        <span class="cat-tag">Sports</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game4">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game4">0.0</span>
+          <span class="rating-count" id="count-game4">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game4">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 4">▶ Play</a>
+          <button class="download-btn" data-game="Game 4" data-file="game4.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 4">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 5 ========== -->
+    <div class="game-card" data-cat="adventure" data-name="Game 5" data-id="game5">
+      <div class="thumb">
+        <img src="images/5.jpg" alt="Game 5">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">05</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 5</span>
+        <span class="cat-tag">Adventure</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game5">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game5">0.0</span>
+          <span class="rating-count" id="count-game5">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game5">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 5">▶ Play</a>
+          <button class="download-btn" data-game="Game 5" data-file="game5.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 5">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 6 ========== -->
+    <div class="game-card" data-cat="action" data-name="Game 6" data-id="game6">
+      <div class="thumb">
+        <img src="images/6.jpg" alt="Game 6">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">06</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 6</span>
+        <span class="cat-tag">Action</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game6">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game6">0.0</span>
+          <span class="rating-count" id="count-game6">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game6">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 6">▶ Play</a>
+          <button class="download-btn" data-game="Game 6" data-file="game6.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 6">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 7 ========== -->
+    <div class="game-card" data-cat="racing" data-name="Game 7" data-id="game7">
+      <div class="thumb">
+        <img src="images/7.jpg" alt="Game 7">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">07</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 7</span>
+        <span class="cat-tag">Racing</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game7">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game7">0.0</span>
+          <span class="rating-count" id="count-game7">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game7">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 7">▶ Play</a>
+          <button class="download-btn" data-game="Game 7" data-file="game7.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 7">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 8 ========== -->
+    <div class="game-card" data-cat="puzzle" data-name="Game 8" data-id="game8">
+      <div class="thumb">
+        <img src="images/8.jpg" alt="Game 8">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">08</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 8</span>
+        <span class="cat-tag">Puzzle</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game8">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game8">0.0</span>
+          <span class="rating-count" id="count-game8">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game8">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 8">▶ Play</a>
+          <button class="download-btn" data-game="Game 8" data-file="game8.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 8">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 9 ========== -->
+    <div class="game-card" data-cat="sports" data-name="Game 9" data-id="game9">
+      <div class="thumb">
+        <img src="images/9.jpg" alt="Game 9">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">09</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 9</span>
+        <span class="cat-tag">Sports</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game9">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game9">0.0</span>
+          <span class="rating-count" id="count-game9">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game9">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 9">▶ Play</a>
+          <button class="download-btn" data-game="Game 9" data-file="game9.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 9">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 10 ========== -->
+    <div class="game-card" data-cat="adventure" data-name="Game 10" data-id="game10">
+      <div class="thumb">
+        <img src="images/10.jpg" alt="Game 10">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">10</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 10</span>
+        <span class="cat-tag">Adventure</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game10">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game10">0.0</span>
+          <span class="rating-count" id="count-game10">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game10">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 10">▶ Play</a>
+          <button class="download-btn" data-game="Game 10" data-file="game10.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 10">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 11 ========== -->
+    <div class="game-card" data-cat="action" data-name="Game 11" data-id="game11">
+      <div class="thumb">
+        <img src="images/11.jpg" alt="Game 11">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">11</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 11</span>
+        <span class="cat-tag">Action</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game11">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game11">0.0</span>
+          <span class="rating-count" id="count-game11">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game11">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 11">▶ Play</a>
+          <button class="download-btn" data-game="Game 11" data-file="game11.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 11">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 12 ========== -->
+    <div class="game-card" data-cat="racing" data-name="Game 12" data-id="game12">
+      <div class="thumb">
+        <img src="images/12.jpg" alt="Game 12">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">12</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 12</span>
+        <span class="cat-tag">Racing</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game12">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game12">0.0</span>
+          <span class="rating-count" id="count-game12">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game12">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 12">▶ Play</a>
+          <button class="download-btn" data-game="Game 12" data-file="game12.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 12">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 13 ========== -->
+    <div class="game-card" data-cat="puzzle" data-name="Game 13" data-id="game13">
+      <div class="thumb">
+        <img src="images/13.jpg" alt="Game 13">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">13</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 13</span>
+        <span class="cat-tag">Puzzle</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game13">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game13">0.0</span>
+          <span class="rating-count" id="count-game13">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game13">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 13">▶ Play</a>
+          <button class="download-btn" data-game="Game 13" data-file="game13.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 13">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 14 ========== -->
+    <div class="game-card" data-cat="sports" data-name="Game 14" data-id="game14">
+      <div class="thumb">
+        <img src="images/14.jpg" alt="Game 14">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">14</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 14</span>
+        <span class="cat-tag">Sports</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game14">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game14">0.0</span>
+          <span class="rating-count" id="count-game14">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game14">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 14">▶ Play</a>
+          <button class="download-btn" data-game="Game 14" data-file="game14.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 14">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 15 ========== -->
+    <div class="game-card" data-cat="adventure" data-name="Game 15" data-id="game15">
+      <div class="thumb">
+        <img src="images/15.jpg" alt="Game 15">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">15</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 15</span>
+        <span class="cat-tag">Adventure</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game15">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game15">0.0</span>
+          <span class="rating-count" id="count-game15">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game15">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 15">▶ Play</a>
+          <button class="download-btn" data-game="Game 15" data-file="game15.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 15">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 16 ========== -->
+    <div class="game-card" data-cat="action" data-name="Game 16" data-id="game16">
+      <div class="thumb">
+        <img src="images/16.jpg" alt="Game 16">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">16</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 16</span>
+        <span class="cat-tag">Action</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game16">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game16">0.0</span>
+          <span class="rating-count" id="count-game16">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game16">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 16">▶ Play</a>
+          <button class="download-btn" data-game="Game 16" data-file="game16.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 16">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 17 ========== -->
+    <div class="game-card" data-cat="racing" data-name="Game 17" data-id="game17">
+      <div class="thumb">
+        <img src="images/17.jpg" alt="Game 17">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">17</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 17</span>
+        <span class="cat-tag">Racing</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game17">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game17">0.0</span>
+          <span class="rating-count" id="count-game17">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game17">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 17">▶ Play</a>
+          <button class="download-btn" data-game="Game 17" data-file="game17.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 17">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 18 ========== -->
+    <div class="game-card" data-cat="puzzle" data-name="Game 18" data-id="game18">
+      <div class="thumb">
+        <img src="images/18.jpg" alt="Game 18">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">18</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 18</span>
+        <span class="cat-tag">Puzzle</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game18">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game18">0.0</span>
+          <span class="rating-count" id="count-game18">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game18">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 18">▶ Play</a>
+          <button class="download-btn" data-game="Game 18" data-file="game18.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 18">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 19 ========== -->
+    <div class="game-card" data-cat="sports" data-name="Game 19" data-id="game19">
+      <div class="thumb">
+        <img src="images/19.jpg" alt="Game 19">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">19</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 19</span>
+        <span class="cat-tag">Sports</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game19">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game19">0.0</span>
+          <span class="rating-count" id="count-game19">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game19">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 19">▶ Play</a>
+          <button class="download-btn" data-game="Game 19" data-file="game19.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 19">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== GAME 20 ========== -->
+    <div class="game-card" data-cat="adventure" data-name="Game 20" data-id="game20">
+      <div class="thumb">
+        <img src="images/20.jpg" alt="Game 20">
+      </div>
+      <div class="info">
+        <div class="top-row">
+          <span class="num">20</span>
+          <button class="fav-star" title="Favorite">☆</button>
+        </div>
+        <span class="name">Game 20</span>
+        <span class="cat-tag">Adventure</span>
+        <div class="rating-display">
+          <span class="stars" id="stars-game20">☆☆☆☆☆</span>
+          <span class="rating-num" id="rating-game20">0.0</span>
+          <span class="rating-count" id="count-game20">(0)</span>
+        </div>
+        <span class="download-count" id="dl-game20">⬇️ 0 downloads</span>
+        <div class="btn-row">
+          <a href="#" class="play-btn" data-game="Game 20">▶ Play</a>
+          <button class="download-btn" data-game="Game 20" data-file="game20.zip">⬇ Download</button>
+          <button class="review-btn" data-game="Game 20">💬 Review</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ---------- NO RESULT ---------- -->
+  <div class="no-result" id="noResult">
+    <p>😕 Koi game nahi mila</p>
+  </div>
+
+  <!-- ---------- REVIEW MODAL ---------- -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h2 class="modal-title" id="modalGameName">Review - Game 1</h2>
+
+      <div class="modal-rating">
+        <p>Apni rating do:</p>
+        <div class="star-input" id="starInput">
+          <span data-value="1">☆</span>
+          <span data-value="2">☆</span>
+          <span data-value="3">☆</span>
+          <span data-value="4">☆</span>
+          <span data-value="5">☆</span>
+        </div>
+      </div>
+
+      <input type="text" id="reviewName" class="review-input" placeholder="Apna naam likho">
+      <textarea id="reviewText" class="review-textarea" placeholder="Apna review likho..."></textarea>
+
+      <button class="submit-review" id="submitReview">Review Submit Karo</button>
+
+      <div class="reviews-list" id="reviewsList">
+        <h3>Reviews (0)</h3>
+        <p class="no-reviews">Abhi koi review nahi hai. Pehla review tum do!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- SCROLL TOP ---------- -->
+  <button class="scroll-top" id="scrollTop">↑</button>
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer class="footer">
+    <p>© 2025 GameZone — Made with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
